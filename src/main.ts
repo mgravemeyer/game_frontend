@@ -15,15 +15,6 @@ const config: Phaser.Types.Core.GameConfig = {
 			gravity: {y: 0}
 		}
 	},
-	plugins: {
-		scene: [
-			{
-				plugin: PhaserMatterCollisionPlugin,
-				key: 'matterCollision',
-				mapping: 'matterCollision'
-			}
-		]
-	},
 	scene: [HelloWorldScene]
 }
 
