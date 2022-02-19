@@ -1,18 +1,31 @@
 import Phaser from 'phaser'
+import PhaserMatterCollisionPlugin from "phaser-matter-collision-plugin";
 
 import HelloWorldScene from './scenes/HelloWorldScene'
 
-const config = {
+const config: Phaser.Types.Core.GameConfig = {
 	type: Phaser.AUTO,
 	width: 800,
 	height: 600,
+	backgroundColor: '#333333',
 	physics: {
-		default: 'arcade',
-		arcade: {
-			gravity: { y: 200 }
+		default: 'matter',
+		matter: {
+			debug: true,
+			gravity: {y: 0}
 		}
+	},
+	plugins: {
+		scene: [
+			{
+				plugin: PhaserMatterCollisionPlugin,
+				key: 'matterCollision',
+				mapping: 'matterCollision'
+			}
+		]
 	},
 	scene: [HelloWorldScene]
 }
 
 export default new Phaser.Game(config)
+
