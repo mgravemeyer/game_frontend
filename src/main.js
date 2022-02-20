@@ -4,8 +4,8 @@ import MainScene from './scenes/MainScene'
 
 const config = {
 	type: Phaser.AUTO,
-	width: 800,
-	height: 600,
+	width: 512,
+	height: 512,
 	backgroundColor: '#333333',
 	physics: {
 		default: 'matter',
